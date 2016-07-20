@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -ex
 
-bundle --gemfile pipeline/Gemfile \
-       exec 'cfn_nag --input-json-path cfn/template-logging.json'
+bundle install --gemfile pipeline/Gemfile
+
+bundle exec cfn_nag --input-json-path cfn/template-logging.json
