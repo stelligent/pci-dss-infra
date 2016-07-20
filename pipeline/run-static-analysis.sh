@@ -1,5 +1,4 @@
 #!/bin/bash
 
-gem install cfn-nag
-
-cfn_nag --input-json-path cfn/template-logging.json
+bundle --gemfile pipeline/Gemfile \
+       exec cfn_nag --input-json-path cfn/template-logging.json
