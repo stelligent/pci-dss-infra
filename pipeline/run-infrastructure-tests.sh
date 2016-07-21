@@ -10,4 +10,4 @@ export AWS_REGION=us-west-2
 
 source <(bin/yaml_to_env logging_output.yml)
 
-rspec cfn/spec
+bundle exec rspec cfn/spec
