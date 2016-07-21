@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'yaml_to_env'
+require 'lib/yaml_to_env'
 
 yaml_file=ARGV[0]
 
