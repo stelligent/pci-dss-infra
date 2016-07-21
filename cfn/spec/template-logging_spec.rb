@@ -1,7 +1,7 @@
 require 'awspec'
 
-fail 'rArchiveLogsBucket must be set' if rArchiveLogsBucket.nil?
+fail 'rArchiveLogsBucket must be set' if ENV['rArchiveLogsBucket'].nil?
 
-describe s3_bucket(rArchiveLogsBucket) do
+describe s3_bucket(ENV['rArchiveLogsBucket']) do
   it { should have_versioning_enabled }
 end
