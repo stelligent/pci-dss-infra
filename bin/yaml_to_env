@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'yaml_to_env'
+
+yaml_file=ARGV[0]
+
+puts YamlToEnv.new.yaml_to_env IO.read(yaml_file)
