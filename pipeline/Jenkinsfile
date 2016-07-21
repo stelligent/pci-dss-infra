@@ -7,4 +7,5 @@ node {
 
    stage 'Acceptance'
      sh 'pipeline/create-infrastructure.sh'
+     sh 'pipeline/run-infrastructure-tests.sh'
 }
