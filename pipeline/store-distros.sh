@@ -1,5 +1,8 @@
 #!/bin/bash -ex
 
+git config --global user.email "build@build.com"
+git config --global user.name "build"
+
 current_version=$(ruby -e 'tags=`git tag -l v\\*`' \
                        -e 'p tags.lines.map { |tag| tag.sub(/v/, "").chomp.to_i }.max')
 
