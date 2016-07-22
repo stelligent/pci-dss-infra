@@ -6,6 +6,17 @@ node {
      sh 'pipeline/run-static-analysis.sh'
 
    stage 'Acceptance'
-     sh 'pipeline/create-infrastructure.sh'
-     sh 'pipeline/run-infrastructure-tests.sh'
+     parallel 'create infrastructure': {
+                sh 'pipeline/create-infrastructure.sh'
+                sh 'pipeline/run-infrastructure-tests.sh'
+              },
+
+              //'update infrastructure': {
+              //  sh 'pipeline/update-infrastructure.sh'
+              //  sh 'pipeline/run-infrastructure-tests.sh'
+              //},
+
+              failFast: true
+
+     sh 'pipeline/store-distros.sh'
 }
