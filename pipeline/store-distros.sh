@@ -26,6 +26,6 @@ new_dist=pci-dss-infra-v${new_version}.tar.gz
 
 tar cvfz ${new_dist} *
 
-aws s3 cp ${new_dist} s3://stelligent-binary-artifact-repo
+aws s3 cp ${new_dist} s3://stelligent-binary-artifact-repo --region ${AWS_REGION}
 
 rm ${new_dist}
