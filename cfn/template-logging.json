@@ -445,7 +445,6 @@
 		"rNetworkAclChangesAlarm": {
 			"Type": "AWS::CloudWatch::Alarm",
 			"Properties": {
-				"AlarmName": "CloudTrailNetworkAclChanges",
 				"AlarmDescription": "Alarms when an API call is made to create, update or delete a Network ACL.",
 				"AlarmActions": [{
 					"Ref": "rSecurityAlarmTopic"

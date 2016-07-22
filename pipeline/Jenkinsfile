@@ -12,11 +12,11 @@ node {
                 sh 'pipeline/destroy-infrastructure.sh'
               },
 
-              //'update infrastructure': {
-              //  //sh 'pipeline/create-old-infrastructure.sh'
-              //  sh 'pipeline/converge-infrastructure.sh'
-              //  sh 'pipeline/run-infrastructure-tests.sh'
-              //},
+              'update infrastructure': {
+                //sh 'pipeline/create-old-infrastructure.sh'
+                sh 'pipeline/converge-infrastructure.sh'
+                sh 'pipeline/run-infrastructure-tests-after-update.sh'
+              },
 
               failFast: true
 
