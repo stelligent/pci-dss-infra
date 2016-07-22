@@ -477,7 +477,6 @@
 			"Type": "AWS::CloudWatch::Alarm",
 			"DependsOn": "rNetworkAclChangesAlarm",
 			"Properties": {
-				"AlarmName": "CloudTrailSecurityGroupChanges",
 				"AlarmDescription": "Alarms when an API call is made to create, update or delete a Security Group.",
 				"AlarmActions": [{
 					"Ref": "rSecurityAlarmTopic"
@@ -510,7 +509,6 @@
 			"Type": "AWS::CloudWatch::Alarm",
 			"DependsOn": "rSecurityGroupChangesAlarm",
 			"Properties": {
-				"AlarmName": "CloudTrailIAMRootActivity",
 				"AlarmDescription": "Root user activity detected!",
 				"AlarmActions": [{
 					"Ref": "rSecurityAlarmTopic"
@@ -542,7 +540,6 @@
 			"Type": "AWS::CloudWatch::Alarm",
 			"DependsOn": "rRootActivityAlarm",
 			"Properties": {
-				"AlarmName": "IAMUnauthorizedActionsAttempted",
 				"AlarmDescription": "Multiple unauthorized actions or logins attempted!",
 				"AlarmActions": [{
 					"Ref": "rSecurityAlarmTopic"
@@ -560,7 +557,6 @@
 			"Type": "AWS::CloudWatch::Alarm",
 			"DependsOn": "rUnauthorizedAttemptAlarm",
 			"Properties": {
-				"AlarmName": "DetectIAMPolicyChanges",
 				"AlarmDescription": "IAM Configuration changes detected!",
 				"AlarmActions": [{
 					"Ref": "rSecurityAlarmTopic"
@@ -579,7 +575,6 @@
 			"Type": "AWS::CloudWatch::Alarm",
 			"DependsOn": "rIAMPolicyChangesAlarm",
 			"Properties": {
-				"AlarmName": "DetectAccessKeyCreation",
 				"AlarmDescription": "Warning: New IAM access key was created. Please be sure this action was neccessary.",
 				"AlarmActions": [{
 					"Ref": "rSecurityAlarmTopic"
@@ -612,7 +607,6 @@
 			"Type": "AWS::CloudWatch::Alarm",
 			"DependsOn": "rIAMCreateAccessKeyAlarm",
 			"Properties": {
-				"AlarmName": "DetectCloudTrailChanges",
 				"AlarmDescription": "Warning: Changes to CloudTrail log configuration detected in this account",
 				"AlarmActions": [{
 					"Ref": "rSecurityAlarmTopic"
