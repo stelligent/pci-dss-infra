@@ -9,10 +9,12 @@ node {
      parallel 'create infrastructure': {
                 sh 'pipeline/create-infrastructure.sh'
                 sh 'pipeline/run-infrastructure-tests.sh'
+                sh 'pipeline/destroy-infrastructure.sh'
               },
 
               //'update infrastructure': {
-              //  sh 'pipeline/update-infrastructure.sh'
+              //  //sh 'pipeline/create-old-infrastructure.sh'
+              //  sh 'pipeline/converge-infrastructure.sh'
               //  sh 'pipeline/run-infrastructure-tests.sh'
               //},
 
